@@ -1,0 +1,14 @@
+# GitHub 和服务器都按 LF 保存文本，Windows 本地仍能正常编辑。
+* text=auto eol=lf
+
+# 图片、模型和压缩文件不做换行转换。
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+*.wasm binary
+*.stl binary
+*.3mf binary
+*.zip binary
+*.gz binary

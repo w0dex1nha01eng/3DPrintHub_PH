@@ -1,0 +1,121 @@
+/* 管理端自己的布局，基础表单样式还是和前台共用 */
+.management-header { min-height: 68px; padding: 14px 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 1px solid var(--line); }
+.management-brand { display: flex; align-items: center; gap: 10px; min-width: 0; color: #335349; }
+.management-brand strong { font-size: 16px; overflow-wrap: anywhere; }
+.management-brand > span { color: #798080; font-size: 12px; border-left: 1px solid #dce3df; margin-left: 6px; padding-left: 16px; white-space: nowrap; }
+.management-account { display: flex; align-items: center; gap: 24px; flex-shrink: 0; }
+.management-body { display: grid; grid-template-columns: 190px minmax(0, 1fr); min-height: calc(100vh - 68px); }
+.management-nav { padding: 30px 14px; border-right: 1px solid var(--line); background: #f8faf9; display: flex; flex-direction: column; gap: 8px; }
+.management-nav a { display: flex; align-items: center; gap: 11px; padding: 13px 14px; border-radius: 5px; color: #738078; font-size: 13px; }
+.management-nav a.active { color: #245b49; background: #e8f1eb; font-weight: 600; }
+.management-nav a:hover { background: #edf1ee; }
+.management-user { margin-top: auto; padding: 24px 14px 0; color: #8b9690; font-size: 12px; }
+.management-content { padding: 32px 36px 48px; width: 100%; max-width: 1260px; min-width: 0; margin: 0 auto; }
+.login-layout { display: block; }
+.login-layout .management-content { max-width: 500px; }
+.settings-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 30px; }
+.settings-heading h1 { font-size: 25px; }
+.settings-heading p { font-size: 12px; padding-top: 6px; }
+.unsaved-label { font-size: 11px; color: #9a7532; }
+.saved-label { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #28775b; }
+.catalog-section { margin-bottom: 36px; }
+.catalog-section-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid #dfe7e3; }
+.catalog-section-heading h2 { display: flex; align-items: center; gap: 9px; font-size: 15px; }
+.catalog-section-heading h2 svg { color: #7b969f; }
+.material-editor-row { padding: 18px 0 23px; border-bottom: 1px solid var(--line); }
+.material-row-heading { display: flex; align-items: center; gap: 18px; margin-bottom: 14px; }
+.material-row-number { color: #8b989e; font-size: 12px; width: 22px; font-variant-numeric: tabular-nums; }
+.material-row-heading .icon-button { margin-left: auto; }
+.enable-option { display: flex; align-items: center; gap: 7px; font-size: 12px; }
+.record-id { color: #9aa6a2; font-size: 10px; overflow-wrap: anywhere; }
+.material-editor-fields { display: grid; grid-template-columns: 1.1fr 1fr 80px 1.1fr; gap: 14px 18px; }
+.material-editor-fields > label { display: flex; flex-direction: column; gap: 7px; font-size: 11px; color: #718078; min-width: 0; }
+.material-editor-fields .description-input { grid-column: span 3; }
+.admin-shell input[type="color"] { width: 40px; height: 39px; padding: 3px; border: 1px solid #d9e2dd; border-radius: 4px; background: white; cursor: pointer; }
+.admin-shell input[type="color"]::-webkit-color-swatch-wrapper { padding: 2px; }
+.admin-shell input[type="color"]::-webkit-color-swatch { border: 0; border-radius: 2px; }
+.color-editor-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 24px; }
+.color-editor-row { min-width: 0; display: flex; gap: 10px; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.color-editor-row input[type="color"] { flex: 0 0 35px; width: 35px; height: 35px; }
+.color-editor-name { min-width: 0; flex: 1; }
+.color-editor-name input { padding: 7px 9px !important; }
+.color-editor-name > span { display: block; padding-top: 5px; font: 10px Consolas, monospace; color: #8b9895; }
+.option-disabled { background: #fafbfa; }
+.option-disabled .record-id { text-decoration: line-through; }
+.printer-specification { display: flex; align-items: center; gap: 16px; border-top: 1px solid var(--line); padding: 25px 0; color: #577584; }
+.printer-specification h2 { font-size: 14px; color: #405f6d; }
+.printer-specification p { font-size: 12px; margin-top: 5px; }
+.printer-specification > div:last-child { margin-left: auto; text-align: right; }
+.printer-specification strong { display: block; font-size: 12px; font-weight: 500; }
+.printer-specification span { display: block; margin-top: 8px; font-size: 11px; color: #91a0a6; }
+.delete-dialog { width: min(420px, calc(100vw - 40px)); border: 1px solid #dae3df; border-radius: 6px; padding: 25px; color: #3e4d48; }
+.delete-dialog::backdrop { background: #26362f55; }
+.delete-dialog h2 { line-height: 1.6; overflow-wrap: anywhere; }
+.delete-dialog p { margin: 14px 0 24px; font-size: 12px; color: #859189; }
+.delete-dialog .button-row { justify-content: flex-end; }
+.button-danger { background: #b44c45; color: white; }
+.material-type-selector { display: flex; align-items: center; gap: 18px; margin: 20px 0; font-size: 13px; }
+.material-type-selector select { width: min(320px, 70%); }
+.type-fields, .stock-fields, .content-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 22px; }
+.type-fields { margin-bottom: 28px; }
+.type-fields > label, .stock-fields > label, .content-fields > label, .content-entry > label, .file-filters > label { display: flex; flex-direction: column; gap: 8px; font-size: 12px; color: #64766e; min-width: 0; }
+.filament-editor-row { border-bottom: 1px solid var(--line); padding: 22px 0; }
+.stock-features { grid-column: 1 / -1; }
+.rgb-editor > span { display: block; font-size: 12px; color: #64766e; margin-bottom: 8px; }
+.rgb-controls { display: flex; align-items: end; gap: 10px; }
+.rgb-controls label { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; font-size: 10px; color: #64766e; }
+.rgb-controls input[type="color"] { flex: 0 0 42px; }
+.rgb-editor > small { display: block; margin-top: 5px; font: 11px Consolas, monospace; }
+.content-fields { padding-top: 20px; }
+.content-entry { display: grid; grid-template-columns: minmax(0, 1fr) 120px 34px; gap: 14px; padding: 22px 0; border-bottom: 1px solid var(--line); align-items: end; }
+.entry-body { grid-column: 1 / -1; }
+.question-entry { grid-template-columns: minmax(0, 1fr) 34px; }
+.file-filters { display: flex; gap: 15px; align-items: end; margin-bottom: 25px; }
+.file-filters > label:first-child { flex: 1; }
+.model-file-row { display: flex; align-items: flex-start; gap: 15px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.model-file-row > svg { flex: 0 0 24px; margin-top: 4px; color: #598279; }
+.model-file-info { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 7px; font-size: 12px; overflow-wrap: anywhere; }
+.model-file-info strong { font-size: 13px; }
+.model-file-info small { color: #71867c; }
+.model-file-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; max-width: 150px; font-size: 12px; }
+.model-file-actions p { flex-basis: 100%; }
+.file-pagination { display: flex; align-items: center; justify-content: flex-end; gap: 14px; padding-top: 20px; font-size: 12px; }
+.empty-stock { padding: 30px 0; }
+.management-nav a { white-space: nowrap; }
+@media (max-width: 1120px) {
+  .management-content { padding: 28px; }
+  .material-editor-fields { grid-template-columns: 1fr 1fr 70px; }
+  .material-editor-fields .description-input { grid-column: span 1; }
+  .color-editor-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .management-nav { overflow-x: auto; }
+  .management-nav a { flex-shrink: 0; }
+  .stock-fields, .type-fields, .content-fields { grid-template-columns: minmax(0, 1fr); }
+  .file-filters { flex-wrap: wrap; }
+  .file-filters > label:first-child { flex-basis: 100%; }
+  .file-filters > label:nth-child(2) { flex: 1; }
+  .management-header { padding: 16px 18px; gap: 12px; flex-wrap: wrap; }
+  .management-brand { gap: 8px; }
+  .management-brand strong { font-size: 14px; }
+  .management-brand > span { font-size: 10px; padding-left: 9px; margin-left: 0; }
+  .management-account { gap: 10px; margin-left: auto; }
+  .management-body { display: block; }
+  .management-nav { flex-direction: row; padding: 8px 12px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .management-nav a { padding: 12px; font-size: 12px; }
+  .management-user { display: none; }
+  .management-content { padding: 25px 20px; }
+  .settings-heading { flex-wrap: wrap; gap: 18px; margin-bottom: 22px; }
+  .settings-heading h1 { font-size: 23px; }
+  .settings-heading .button-row { width: 100%; justify-content: flex-end; }
+  .settings-heading .unsaved-label, .settings-heading .saved-label { margin-right: auto; }
+  .material-editor-fields { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .material-editor-fields .description-input { grid-column: span 2; }
+  .material-row-heading { gap: 12px; }
+  .color-editor-grid { grid-template-columns: minmax(0, 1fr); }
+  .color-editor-row { gap: 15px; }
+  .color-editor-name > span { font-size: 11px; }
+  .printer-specification { flex-wrap: wrap; gap: 13px; }
+  .printer-specification > div:last-child { margin-left: 38px; text-align: left; }
+  .catalog-section-heading h2 { font-size: 14px; }
+}
