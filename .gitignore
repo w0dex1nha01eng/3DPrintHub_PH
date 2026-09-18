@@ -1,4 +1,4 @@
-# 默认不收，下面只放项目运行需要的代码。
+
 *
 
 !.gitignore
@@ -32,7 +32,6 @@ backend/*
 !backend/app/
 !backend/app/**
 
-# 即使以后又放进源码目录，也不提交这些内容。
 **/__pycache__/
 **/*.py[cod]
 **/*.test.*
